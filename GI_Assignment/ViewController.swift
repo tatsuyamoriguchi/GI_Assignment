@@ -49,7 +49,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource  {
         let latitude = dataList[indexPath.row].0
         let longititude = dataList[indexPath.row].1
         
-        cell.textLabel?.text = "Latitude: " + String(latitude) + ", " + "Longitude: " +  String(longititude)
+//        cell.textLabel?.text = "Latitude: " + String(latitude) + ", " + "Longitude: " +  String(longititude)
+        cell.textLabel?.text = String(latitude) + ", " + String(longititude)
         return cell
     }
     
@@ -69,7 +70,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource  {
         let annotation = MKPointAnnotation()
         annotation.coordinate = locValue
         annotation.title = "You are here"
-        annotation.subtitle = String(lati) + ", " + String(longi)
+        //annotation.subtitle = String(lati) + ", " + String(longi)
         mapView.addAnnotation(annotation)
         
     }
